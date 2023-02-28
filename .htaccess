@@ -1,0 +1,53 @@
+RewriteEngine On
+Options -Indexes
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+#RewriteCond %{HTTPS} !on
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteRule  ^product-detail$                 detailProduct.php                [NC,L]
+RewriteRule  ^product-detail/$                 detailProduct.php                [NC,L]
+RewriteRule  ^product-detail/(.*)$/?$       detailProduct.php?id_product=$1       [NC,L]
+
+
+RewriteRule  ^bai-viet-admin/$                 admin/bai-viet.php                 [NC,L]
+RewriteRule  ^bai-viet-admin$                 admin/bai-viet.php                 [NC,L]
+
+
+RewriteRule  ^them-bai-viet/$                 admin/bai-viet-them.php                 [NC,L]
+RewriteRule  ^them-bai-viet$                 admin/bai-viet-them.php                 [NC,L]
+
+RewriteRule  ^them-bai-trang-chu/$                 admin/bai-viet-trang-chu.php                 [NC,L]
+RewriteRule  ^them-bai-trang-chu$                 admin/bai-viet-trang-chu.php                 [NC,L]
+
+RewriteRule  ^sua-bai-viet/$                 admin/bai-viet-sua.php
+RewriteRule  ^sua-bai-viet$                 admin/bai-viet-sua.php                 [NC,L]
+RewriteRule  ^sua-bai-viet/(.*)$/?$       admin/bai-viet-sua.php?ma_bai_viet=$1       [NC,L]
+
+RewriteRule  ^blog-detail/$                 blog-detail.php
+RewriteRule  ^blog-detail$                 blog-detail.php                 [NC,L]
+RewriteRule  ^blog-detail/(.*)$/?$       blog-detail.php?ma_bai_viet=$1       [NC,L]
+
+RewriteRule  ^bai-viet/$                 post.php
+RewriteRule  ^bai-viet$                 post.php                 [NC,L]
+RewriteRule  ^bai-viet/(.*)$/?$       post.php?url=$1       [NC,L]
+
+RewriteRule  ^end-bai-viet/$                 admin/end-bai-viet.php
+RewriteRule  ^end-bai-viet$                 admin/end-bai-viet.php                 [NC,L]
+
+ErrorDocument 404 /404.php
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^/404/$
+RewriteRule ^(.*)$ /404.php [L]
+Options +SymLinksIfOwnerMatch
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond ${REQUEST_FILENAME} !-d
+RewriteRule . /404.php [L]
+
+
+

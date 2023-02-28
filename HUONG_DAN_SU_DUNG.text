@@ -1,0 +1,39 @@
+HƯỚNG DẪN-
+1) Tải xuống và cài đặt Ganache (https://www.trufflesuite.com/ganache)
+2) Tải xuống và cài đặt các ứng dụng chạy PHP như Xampp hoặc laragon ở đây em sẽ hướng dẫn tải Xampp, Xampserver trên windows (https://www.apachefriends.org/download.html) hoặc MAMP trên MacOS X (https://www.mamp.info/en/windows/)
+3) Tải xuống và cài đặt Google Chrome (trong trường hợp bạn chưa có). Truy cập cửa hàng Chrome và tải xuống Metamask (https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
+4) Tạo một tài khoản metamask.
+5) Chạy Ganache.
+6) In siêu dữ liệu, chọn Mạng > RPC tùy chỉnh
+7) Đặt bất kỳ tên nào cho mạng.
+8) Sao chép URL Máy chủ RPC từ Ganache (Có thể là HTTP://127.0.0.1:7545 nhưng vui lòng kiểm tra)
+9) Chuyển đến Metamask > Tài khoản > Nhập tài khoản.
+10) Mở Ganache, chuyển đến tab Tài khoản, nhấp vào biểu tượng chìa khóa ở bên phải cho bất kỳ tài khoản nào và sao chép khóa riêng.
+11) Dán khóa này vào phần tài khoản nhập Metamask.
+12) Sao chép smartcontract.sol từ repo này và dán vào phần mã https://remix.ethereum.org/.
+13) Lưu file, chuyển đến tab biên dịch (compiler) và biên dịch mã.
+14) Chuyển đến tab triển khai (deploy), chọn Môi trường là 'Injected Provider - Metamask', phiên bản 6.0 (cùng phiên bản ghi trong file sol);
+15) Nhấp vào triển khai.
+16) Sao chép địa chỉ hợp đồng (contract), dưới mục Deployed Contracts, có thể nhấp vào contract vừa mới hiện ra để auto copy và dán vào tệp app.js chỗ address.
+17) Sao chép hợp đồng ABI từ tab biên dịch (compiler) và dán vào tệp app.js (paste từ sau dấu "=" tới trước dấu ";" chỗ ABI).
+18) Khởi động MAMP, laragon hoặc Xampserver (Tùy bạn cài đặt)
+19) Dán thư mục dự án bên trong thư mục htdocs của thư mục gốc, hoặc thư mục www nếu bạn dùng laragon.
+20) Truy cập localhost hoặc localhost:8888/ (URL này có thể thay đổi tùy thuộc vào phần mềm bạn đã cài đặt và hệ điều hành của bạn)
+21) Mở phpmyadmin, truy cập SQL hoặc import file sql đã để ở thư mục database/DoAnTotNghiep.sql .
+22) Thực hiện các truy vấn.
+23) Mở URL http://localhost:8888/SupplyChainDAPP_FULL hoặc http://localhost/SupplyChainDAPP_FULL (URL này có thể thay đổi tùy thuộc vào phần mềm bạn đã cài đặt, hệ điều hành của bạn và tên dự án)
+24) Nó sẽ chạy, nếu ở tab thường chưa kết nối hãy truy cập lại ở tab ẩn danh.
+
+-1 vài tài khoản đã tạo để sử dụng:
+
+- tài khoản & mật khẩu :
++ admin@gmail.com
++ 123456
+
+- tài khoản & mật khẩu :
++ nhasanxuat2@gmail.com
++ 123456
+
+- tài khoản & mật khẩu :
++ nhasanxuat2@gmail.com
++ 123456
